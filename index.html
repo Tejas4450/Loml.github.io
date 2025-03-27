@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, [ Aadya ] ❤️</title>
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Arial', cursive;
+            background: #fff5f8;
+            margin: 0;
+            text-align: center;
+        }
+
+        .header {
+            background: url('your-couple-photo.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 4em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .apology-letter {
+            padding: 50px 20px;
+            background: #ffe6ee;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .promises {
+            padding: 50px 20px;
+            background: white;
+        }
+
+        .heart {
+            color: #ff3366;
+            font-size: 40px;
+            animation: pulse 1.5s infinite;
+        }
+
+        button {
+            background: #ff3366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>I'm Sorry, Aadya ❤️</h1>
+    </div>
+
+    <!-- Apology Letter -->
+    <div class="apology-letter">
+        <div class="heart">♥</div>
+        <h2>To My Forever Love...</h2>
+        <p>
+            I’ve been thinking about how I hurt you, and my i have realized my mistake.<br>
+            You’re my everything, and I promise to never do that kind of stupidity . Give me another chance i will make sure you won't reget it
+        </p>
+        <div class="heart">♥</div>
+    </div>
+
+    <!-- Promises Section -->
+    <div class="promises">
+        <h2>My Promises to You</h2>
+        <div id="promise-list">
+            <p>✓ Always put you first</p>
+            <p>✓ Listen with my whole heart</p>
+            <p>✓ Grow together with you</p>
+        </div>
+    </div>
+
+    <!-- Final Button -->
+    <button onclick="showFinalMessage()">Can You Forgive Me?</button>
+
+    <script>
+        // Simple JavaScript Interactions
+        function showFinalMessage() {
+            alert("Thank you for giving me a chance to be better. I love you more than words can say. Let's talk? 💌");
+            
+            // Add floating hearts animation
+            for(let i = 0; i < 20; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '♥';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animation = 'float ' + (Math.random() * 3 + 2) + 's linear';
+            heart.style.color = '#ff3366';
+            heart.style.fontSize = '30px';
+            document.body.appendChild(heart);
+            
+            // Remove hearts after animation
+            setTimeout(() => heart.remove(), 5000);
+        }
+    </script>
+</body>
+</html>
